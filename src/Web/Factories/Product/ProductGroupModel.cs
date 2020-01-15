@@ -1,4 +1,5 @@
-﻿using Web.Framework.Models;
+﻿using Newtonsoft.Json;
+using Web.Framework.Models;
 
 namespace Web.Factories.Product
 {
@@ -12,12 +13,19 @@ namespace Web.Factories.Product
             }
         }
 
+        [JsonProperty("Id")]
+        public int Id { get; set; }
+
+        [JsonProperty("Name")]
         public string Name { get; set; }
 
+        [JsonProperty("Description")]
         public string Description { get; set; }
 
+        [JsonProperty("PageSize")]
         public int PageSize { get; set; }
 
+        [JsonProperty("PageSizeOptions")]
         public string PageSizeOptions { get; set; }
     }
 }
